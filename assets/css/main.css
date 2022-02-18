@@ -1,0 +1,815 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
+@-moz-keyframes spinner {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@-ms-keyframes spinner {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+	}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background: #fcfcfc;
+}
+@media (min-width: 641px) {
+  html {
+    background: #4b4b4b;
+  }
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.noscroll { 
+	overflow: hidden;
+}
+
+.h10{
+  font-size: 12px;
+}
+
+main {
+  font-size: 0;
+}
+main .column.left,
+main .column.right {
+  background: #fcfcfc;
+  display: block;
+  position: relative;
+  font-size: 1rem;
+  width: 100%;
+  min-height: 0;
+  vertical-align: top;
+}
+@media (min-width: 641px) {
+    main .column.left,
+    main .column.right {
+      display: inline-block;
+      width: 50%;
+      min-height: 100vh;
+    }
+    main .column.left {
+      position: fixed;  
+    }
+    main .column.right {
+      margin-left: 50%;
+    }
+}
+
+.video-banner {
+  display: block;
+}
+@media (min-width: 641px) {
+  .video-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.video-banner .video-banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.video-banner-headline {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25em;
+  font-weight: 900;
+  line-height: 1.0em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+@media (min-width: 641px) {
+  .video-banner-headline {
+    left: 2em;
+    bottom: 2.75em;
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+}
+.video-banner-icon-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.0);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1.0);
+	-ms-transform: translateX(-50%) translateY(-50%) scale(1.0);
+	-o-transform: translateX(-50%) translateY(-50%) scale(1.0);
+	transform: translateX(-50%) translateY(-50%) scale(1.0);
+  
+  -webkit-transition: 
+		all 0.2s ease-out 0.05s;
+	transition: 
+		all 0.2s ease-out 0.05s;
+}
+@media (min-width: 641px) {
+  .video-banner-icon-play {
+    width: 4.5em;
+    height: 4.5em;
+  }
+}
+.video-banner-icon-play:hover {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	-ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	-o-transform: translateX(-50%) translateY(-50%) scale(1.2);
+	transform: translateX(-50%) translateY(-50%) scale(1.2);
+  
+  backgound: #330099;
+}
+
+.content {
+  display: block;
+  min-height: 100vh;
+  max-width: 40rem;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+}
+@media (min-width: 641px) {
+  .content {
+    margin: 5.75rem auto;
+    padding: 2.5rem;
+  }
+}
+
+.content h1,
+.content h2,
+.content p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #0D013D;
+}
+.content h1 {
+  font-size: 3.25em;
+  font-weight: 200;
+  line-height: 1.0em;
+  
+  margin: 0 0 0.5rem 0;
+}
+@media (min-width: 641px) {
+  .content h1 {
+    font-size: 4em;
+  }
+}
+.content h2 {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.155em;
+  
+  margin-top: 3em;
+}
+
+/* buttons */
+.content .button-group {
+  margin-top: 1em;
+}
+.content .button {
+  display: inline-block;
+  padding: 0.8em 0.6em;
+  min-width: 4em;
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 1.5em;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+  
+  /* button theme - secondary is default */
+  background: #f0f0f0;
+  color: #2B2B2B;
+  
+  -webkit-transition: 
+		all 0.2s ease-out 0.05s;
+	transition: 
+		all 0.2s ease-out 0.05s;
+}
+.content .button ~ .button {
+  margin-left: 0.5em;
+}
+.content .button:hover {
+  background: #e5e5e5;
+}
+/* primary button overrides */
+.content .button.primary {
+  background: #E50055;
+  color: #fff;
+}
+.content .button.primary:hover {
+  background: #ff8c6f;
+}
+
+
+/* video thumbnail grid */
+.content .video-thumb-grid {
+  position: relative;
+  font-size: 0; /* collapse the white-space */
+  width: calc(100% + 2rem);
+  margin: 0 -1rem;
+}
+.content .video-thumb {
+  display: inline-block;
+  vertical-align: top;
+  
+  text-decoration: none;
+  
+  /* calculate the width, gutters, and aspect ratio */
+  width: calc((100% - 4rem) / 2);
+  height: 0;
+  padding-top: calc(((100% - 4rem) / 2) * 0.5625); /* 16:9 calc */
+  
+  margin: 1rem 1rem; /* gutters */
+  
+  overflow: hidden; /* clipping */
+  
+  position: relative; /* enable positioning for inner content */
+  
+  font-size: 1rem; /* reset the font size */
+  
+  -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+  box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  
+  -webkit-transition: 
+		all 0.2s ease-out 0.05s;
+	transition: 
+		all 0.2s ease-out 0.05s;
+}
+.content .video-thumb:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(13,1,61,0.35);
+}
+.content .video-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+  /* position inside the 16:9 container */
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* clipping for source images that are letterboxed */
+  object-fit: cover;
+  object-position: 50% 50%;
+  
+  background: #2b2b2b;
+}
+
+
+
+
+
+
+
+
+/* Video Modal
+-----------------------------------------*/
+.video-modal,
+.video-modal .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+}
+.video-modal {
+	overflow: hidden;
+	position: fixed;
+	opacity: 0.0;
+
+  -webkit-transform: translate(500%,0%);
+  transform: translate(500%,0%);
+
+  -webkit-transition: -webkit-transform 0s linear 0s;
+  transition: transform 0s linear 0s;
+
+
+  /* using flexbox for vertical centering */
+
+  /* Flexbox display */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  /* Vertical alignment */
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.video-modal .overlay {
+  z-index: 0;
+  background: rgba(13,1,61,0.82); /* overlay color */
+
+  opacity: 0.0;
+
+  -webkit-transition: opacity 0.2s ease-out 0.05s;
+  transition: opacity 0.2s ease-out 0.05s;
+}
+
+
+.video-modal-content {
+	position: relative;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	z-index: 1;
+  
+	margin: 0 auto;
+
+	overflow-y: visible;
+
+	background: #000;
+  
+  width: calc(100% - 12em);
+  height: 0;
+  padding-top: calc((100% - 12em) * 0.5625); /* 16:9 calc */
+}
+
+/* Scaling to fit within the current Viewport size:
+   When viewport aspect ratio is greater than 16:9
+   work off the height instead of the width for calc */
+ @media (min-aspect-ratio: 16/9) {
+  .video-modal-content {
+    width: 0;
+    height: calc(100vh - 10em);
+    padding-top: 0;
+    padding-left: calc((100vh - 10em) * 1.7778); /* 16:9 calc */
+  }
+}
+
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 640px) {
+	.video-modal-content {
+		width: calc(100% - 1em);
+    padding-top: calc((100% - 1em) * 0.5625); /* 16:9 calc */
+	}
+}
+
+/* modal close button */
+.close-video-modal {
+	display: block;
+    position: absolute;
+    left: 0;
+    top: -40px;
+
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* set the iframe element to stretch to fit its parent element */
+iframe#youtube {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+
+	background: #000;
+	box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
+}
+
+/* show the modal: 
+   add class to the body to reveal */
+.show-video-modal .video-modal {
+	opacity: 1.0;
+
+	transform: translate(0%,0%);
+	-webkit-transform: translate(0%,0%);
+}
+.show-video-modal .video-modal .overlay {
+	opacity: 1.0;
+}
+.show-video-modal .video-modal-content {
+	transform: translate(0%,0%);
+	-webkit-transform: translate(0%,0%);
+}
+
+
+
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+
+.follow-me li a[href*="amazon.co.jp"]::before,
+.follow-me li a[href*="amazon.com"]::before         { border-color: #ff9900; background-color: #ff9900; content: "\f270"; }
+.follow-me li a[href*="codepen.io"]::before         { border-color: #000000; background-color: #000000; content: "\f1cb"; }
+.follow-me li a[href*="delicious.com"]::before      { border-color: #3399ff; background-color: #3399ff; content: "\f1a5"; }
+.follow-me li a[href*="deviantart.com"]::before     { border-color: #05cc47; background-color: #05cc47; content: "\f1bd"; }
+.follow-me li a[href*="digg.com"]::before           { border-color: #000000; background-color: #000000; content: "\f1a6"; }
+.follow-me li a[href*="dribble.com"]::before        { border-color: #000000; background-color: #ea4c89; content: "\f17d"; }
+.follow-me li a[href*="dropbox.com"]::before        { border-color: #007ee5; background-color: #007ee5; content: "\f16b"; }
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; background-color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="feedly.com"]::before         { border-color: #6cc655; background-color: #6cc655; content: "\f09e"; }
+.follow-me li a[href*="flickr.com"]::before         { border-color: #0063cc; background-color: #0063dc; content: "\f16e"; }
+.follow-me li a[href*="foursquare.com"]::before     { border-color: #f94877; background-color: #f94877; content: "\f180"; }
+.follow-me li a[href*="github.com"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
+.follow-me li a[href*="plus.google.com"]::before    { border-color: #dc4e41; background-color: #dc4e41; content: "\f0d5"; }
+.follow-me li a[href*="b.hatena.ne.jp"]::before     { border-color: #008fde; background-color: #008fde; content: "\f027"; font-family: blogicon; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #125688; background-color: #125688; content: "\f16d"; }
+.follow-me li a[href*="last.fm"]::before            { border-color: #d51007; background-color: #d51007; content: "\f202"; }
+.follow-me li a[href*="linkedin.com"]::before       { border-color: #0077b5; background-color: #0077b5; content: "\f0e1"; }
+.follow-me li a[href*="nicovideo.jp"]::before       { border-color: #eaeaea; background-color: #eaeaea; content: "\f047"; font-family: blogicon; }
+.follow-me li a[href*="pinterest.com"]::before      { border-color: #bd081c; background-color: #bd081c; content: "\f0d2"; }
+.follow-me li a[href*="getpocket.com"]::before      { border-color: #ef3f56; background-color: #ef3f56; content: "\f265"; }
+.follow-me li a[href*="reddit.com"]::before         { border-color: #ff4500; background-color: #ff4500; content: "\f1a1"; }
+.follow-me li a[href*="skype.com"]::before,
+.follow-me li a[href*="skype:"]::before             { border-color: #00aff0; background-color: #00aff0; content: "\f17e"; }
+.follow-me li a[href*="slideshare.net"]::before     { border-color: #2d2d2d; background-color: #2d2d2d; content: "\f1e7"; }
+.follow-me li a[href*="spotify.com"]::before        { border-color: #84bd00; background-color: #84bd00; content: "\f1bc"; }
+.follow-me li a[href*="steamcommunity.com"]::before { border-color: #171a21; background-color: #171a21; content: "\f1b6"; }
+.follow-me li a[href*="stumbleupon.com"]::before    { border-color: #eb4929; background-color: #eb4929; content: "\f1a4"; }
+.follow-me li a[href*="tumblr.com"]::before         { border-color: #36465d; background-color: #36465d; content: "\f173"; }
+.follow-me li a[href*="twitch.tv"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+.follow-me li a[href*="vimeo.com"]::before          { border-color: #1ab7ea; background-color: #1ab7ea; content: "\f27d"; }
+.follow-me li a[href*="vine.co"]::before            { border-color: #11b58a; background-color: #11b58a; content: "\f1ca"; }
+.follow-me li a[href*="weibo.com"]::before          { border-color: #e6162d; background-color: #e6162d; content: "\f18a"; }
+.follow-me li a[href*="whatsapp.com"]::before       { border-color: #64d548; background-color: #64d548; content: "\f232"; }
+.follow-me li a[href*="wordpress.com"]::before,
+.follow-me li a[href*="wordpress.org"]::before      { border-color: #21759b; background-color: #21759b; content: "\f19a"; }
+.follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; background-color: #cd201f; content: "\f16a"; }
+.follow-me li a[href$="/feed"]::before              { border-color: #ffa500; background-color: #ffa500; content: "\f09e"; }
+.follow-me li a[href$="/subscribe"]::before         { border-color: #363636; background-color: #363636; content: "\f000"; font-family: blogicon; }
+.follow-me li a:hover::before {
+  background-color: #fff;
+}
+.follow-me li a[href*="amazon.co.jp"]:hover::before,
+.follow-me li a[href*="amazon.com"]:hover::before         { color: #ff9900; }
+.follow-me li a[href*="codepen.io"]:hover::before         { color: #000000; }
+.follow-me li a[href*="delicious.com"]:hover::before      { color: #3399ff; }
+.follow-me li a[href*="deviantart.com"]:hover::before     { color: #05cc47; }
+.follow-me li a[href*="digg.com"]:hover::before           { color: #000000; }
+.follow-me li a[href*="dribble.com"]:hover::before        { color: #ea4c89; }
+.follow-me li a[href*="dropbox.com"]:hover::before        { color: #007ee5; }
+.follow-me li a[href*="facebook.com"]:hover::before       { color: #3b5998; }
+.follow-me li a[href*="feedly.com"]:hover::before         { color: #6cc655; }
+.follow-me li a[href*="flickr.com"]:hover::before         { color: #0063dc; }
+.follow-me li a[href*="foursquare.com"]:hover::before     { color: #f94877; }
+.follow-me li a[href*="github.com"]:hover::before         { color: #181717; }
+.follow-me li a[href*="plus.google.com"]:hover::before    { color: #dc4e41; }
+.follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { color: #008fde; }
+.follow-me li a[href*="instagram.com"]:hover::before      { color: #125688; }
+.follow-me li a[href*="last.fm"]:hover::before            { color: #d51007; }
+.follow-me li a[href*="linkedin.com"]:hover::before       { color: #0077b5; }
+.follow-me li a[href*="nicovideo.jp"]:hover::before       { color: #eaeaea; }
+.follow-me li a[href*="pinterest.com"]:hover::before      { color: #bd081c; }
+.follow-me li a[href*="getpocket.com"]:hover::before      { color: #ef3f56; }
+.follow-me li a[href*="reddit.com"]:hover::before         { color: #ff4500; }
+.follow-me li a[href*="skype.com"]:hover::before,
+.follow-me li a[href*="skype:"]:hover::before             { color: #00aff0; }
+.follow-me li a[href*="slideshare.net"]:hover::before     { color: #2d2d2d; }
+.follow-me li a[href*="spotify.com"]:hover::before        { color: #84bd00; }
+.follow-me li a[href*="steamcommunity.com"]:hover::before { color: #171a21; }
+.follow-me li a[href*="stumbleupon.com"]:hover::before    { color: #eb4929; }
+.follow-me li a[href*="tumblr.com"]:hover::before         { color: #36465d; }
+.follow-me li a[href*="twitch.tv"]:hover::before          { color: #6441a5; }
+.follow-me li a[href*="twitter.com"]:hover::before        { color: #55acee; }
+.follow-me li a[href*="vimeo.com"]:hover::before          { color: #1ab7ea; }
+.follow-me li a[href*="vine.co"]:hover::before            { color: #11b58a; }
+.follow-me li a[href*="weibo.com"]:hover::before          { color: #e6162d; }
+.follow-me li a[href*="whatsapp.com"]:hover::before       { color: #64d548; }
+.follow-me li a[href*="wordpress.com"]:hover::before,
+.follow-me li a[href*="wordpress.org"]:hover::before      { color: #21759b; }
+.follow-me li a[href*="youtube.com"]:hover::before        { color: #cd201f; }
+.follow-me li a[href$="/feed"]:hover::before              { color: #ffa500; }
+.follow-me li a[href$="/subscribe"]:hover::before         { color: #363636; }
+
+
+
+
+/* 絶対位置指定用 */
+.header-right {
+  position: absolute;/* 絶対位置指定 */
+  top: 45px;/* 上からの位置調整して下さい */
+  right: 10%;/* 右からの位置調整して下さい */
+}
+/* SNSフォローボタン */
+.sns-link-btn {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  list-style-type: none;
+}
+.sns-link-btn li {
+  margin-right: 10px;
+}
+.sns-link-btn li a {
+  display: block;
+  margin: 0;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+.sns-link-btn .tw-btn a {
+  border: 1px solid #00aced;
+}
+.sns-link-btn .tw-btn a i{
+  color: #00aced;
+}
+.sns-link-btn .fa-btn a {
+  border: 1px solid #305097;
+}
+.sns-link-btn .fa-btn a i{
+  color: #305097;
+}
+.sns-link-btn .insta-btn a {
+  border: 1px solid #D93177;
+}
+.sns-link-btn .insta-btn a i{
+  color: #D93177;
+}
+/* スマートフォン */
+@media screen and (max-width: 767px) {
+.header-right {
+  position: absolute;
+  top: 10px;
+  right: 6%;
+}
+.sns-link-btn li a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+}
+
+
+.footer-copyright {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f5f5f5;
+}
+
+
+
+
+
+
+@charset "utf-8";
+.no-gutter > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+.bg-lightgreen {
+	background-color: #e6ede9;
+}
+.jumbotron {
+	background-image: url('../img/top-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+}
+.heading {
+	border-left: 6px solid #aaa;
+	padding: 0 0 0 10px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	content: ">"
+}
+.footer-copyright {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f5f5f5;
+}
+.map iframe {
+	width: 100%;
+	height: 450px;
+}
+
+
+
+
+
+
+@charset "utf-8";
+.no-gutter > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+.bg-lightgreen {
+	background-color: #e6ede9;
+}
+.jumbotron {
+	background-image: url('../img/top-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+}
+.heading {
+	border-left: 6px solid #aaa;
+	padding: 0 0 0 10px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	content: ">"
+}
+.footer-copyright {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f5f5f5;
+}
+.map iframe {
+	width: 100%;
+	height: 450px;
+}
+
+/* 大デバイス（デスクトップ, 992px 未満）
+============================================== */
+@media screen and (max-width: 991.98px) {
+.footer-logo {
+	width: 100%;
+}
+} /* END */
+
+/* 中デバイス（タブレット, 768px 未満）
+============================================== */
+@media screen and (max-width: 767.98px) {
+.gnav-item {
+	display: block;
+	width: 100%;
+	border: none;
+}
+.gnav-item+ .gnav-item {
+	border: none;
+}
+table th, table td {
+	padding: .25rem !important;
+}
+table th:first-child {
+	width: 25%;
+}
+} /* END */
+
+/* 小デバイス（縦向きモバイル, 576px 以上 デスクトップ, 992px 未満）
+============================================== */
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+ #sec2  {
+     height: 500px;
+ } 
+} /* END */
+
+/* 小デバイス（縦向きモバイル, 576px 以上）
+============================================== */
+@media screen and (min-width: 576px) {
+ #sec2 .message {
+    position: absolute;
+     left: 0;
+ } 
+} /* END */
+
+
+img {
+  -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    touch-callout:none;
+    user-select:none;
+  }
+
+  img {
+    pointer-events: none; 
+  }
